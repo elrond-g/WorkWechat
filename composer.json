@@ -1,0 +1,15 @@
+{
+    "name": "elrond/workwechat",
+    "description": "A SDK for WorkWechat(一个企业微信的SDK)",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "6.3.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Elrond",
+            "email": "guocheng@shopex.cn"
+        }
+    ]
+}
