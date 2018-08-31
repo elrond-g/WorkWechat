@@ -12,7 +12,9 @@ class TmpFile
         {
             $content = file_get_contents($file);
             $params = json_decode($content, true);
-            return $params['value'];
+            if(time() <= $params['expire'])
+                return $params['value'];
+            return false;
         }
         return false;
 
