@@ -19,6 +19,9 @@ class WorkWechat
 
     private function init($appId, $agentId, $secret)
     {
+        $this->appId = $appId;
+        $this->agentId = $agentId;
+        $this->secret = $secret;
         $this->requester = new Requester($appId, $agentId, $secret);
 
     }
@@ -28,6 +31,15 @@ class WorkWechat
         return new Oauth($this->requester);
     }
 
+    public function makeRequest()
+    {
+        return new Requester($this->appId, $this->agentId, $this->secret);
+    }
+
+    public function getRequest()
+    {
+        return $this->requester;
+    }
 }
 
 
